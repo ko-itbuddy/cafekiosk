@@ -7,6 +7,7 @@ public class Americano implements Beverage {
         return "아메리카노";
     }
 
+
     @Override
     public int getPrice() {
         return 4000;
