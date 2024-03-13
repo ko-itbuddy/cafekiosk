@@ -11,6 +11,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import sample.cafekiosk.spring.api.controller.product.ProductCreateRequest;
 import sample.cafekiosk.spring.domain.BaseEntity;
 
 @Getter
@@ -44,5 +45,13 @@ public class Product extends BaseEntity {
         this.sellingStatus = sellingStatus;
         this.name = name;
         this.price = price;
+    }
+
+    public static Product createEntity(ProductCreateRequest request) {
+        return Product.builder()
+                      .type(request.getType())
+                      .sellingStatus(request.getSellingStatus())
+                      .name(request.getName())
+                      .build();
     }
 }
