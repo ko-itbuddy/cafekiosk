@@ -2,12 +2,9 @@ package sample.cafekiosk.spring.api.service.product;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.tuple;
-import static sample.cafekiosk.spring.domain.product.ProductSellingStatus.HOLD;
 import static sample.cafekiosk.spring.domain.product.ProductSellingStatus.SELLING;
-import static sample.cafekiosk.spring.domain.product.ProductSellingStatus.STOP_SELLING;
 import static sample.cafekiosk.spring.domain.product.ProductType.HANDMADE;
 
-import jakarta.transaction.Transactional;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
@@ -15,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import sample.cafekiosk.spring.api.controller.product.ProductCreateRequest;
+import sample.cafekiosk.spring.api.controller.product.reqeust.ProductCreateRequest;
 import sample.cafekiosk.spring.api.service.product.response.ProductResponse;
 import sample.cafekiosk.spring.domain.product.Product;
 import sample.cafekiosk.spring.domain.product.ProductRepository;

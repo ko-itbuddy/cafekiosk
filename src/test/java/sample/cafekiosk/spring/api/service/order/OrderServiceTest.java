@@ -8,7 +8,6 @@ import static sample.cafekiosk.spring.domain.product.ProductType.BAKERY;
 import static sample.cafekiosk.spring.domain.product.ProductType.BOTTLE;
 import static sample.cafekiosk.spring.domain.product.ProductType.HANDMADE;
 
-import jakarta.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
@@ -17,7 +16,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import sample.cafekiosk.spring.api.controller.order.OrderCreateRequest;
+import sample.cafekiosk.spring.api.controller.order.request.OrderCreateRequest;
 import sample.cafekiosk.spring.api.service.order.response.OrderResponse;
 import sample.cafekiosk.spring.domain.order.OrderRepository;
 import sample.cafekiosk.spring.domain.orderproduct.OrderProductRepository;

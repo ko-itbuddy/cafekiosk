@@ -11,7 +11,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import sample.cafekiosk.spring.api.controller.product.ProductCreateRequest;
+import sample.cafekiosk.spring.api.controller.product.reqeust.ProductCreateRequest;
 import sample.cafekiosk.spring.domain.BaseEntity;
 
 @Getter
