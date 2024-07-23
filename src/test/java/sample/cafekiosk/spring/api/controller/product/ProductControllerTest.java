@@ -2,6 +2,7 @@ package sample.cafekiosk.spring.api.controller.product;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -70,7 +71,11 @@ class ProductControllerTest {
                        .content(objectMapper.writeValueAsString(requset))
                        .contentType(MediaType.APPLICATION_JSON)
                ).andDo(print())
-               .andExpect(status().isBadRequest());
+               .andExpect(status().isBadRequest())
+               .andExpect(jsonPath("$.code").value("400"))
+               .andExpect(jsonPath("$.status").value("BAD_REQUEST"))
+               .andExpect(jsonPath("$.message").value("상품 타입은 필수입니다."))
+        ;
 
     }
 
